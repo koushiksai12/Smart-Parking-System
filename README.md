@@ -86,7 +86,7 @@ This project is about showing the status of a parking space. Installing a ultras
     
 >Also try connecting the **VCC** pin of LCD Screen to **Vin** instead of **3V3** pin of NodeMCU
 
-2. Connect the NodeMCU v1.0 with Ultrasonic screen
+2. Connect the NodeMCU v1.0 with Ultrasonic Sensor
     ![NodeMCU v1.0 connected to Ultrasonic Sensor](/Images/node_ultrasonic.png "NodeMCU v1.0 connected to Ultrasonic sensor")
     1. **VCC** pin of Ultra Sonic sensor is connected to **Vin** pin of NodeMCU v1.0
 
