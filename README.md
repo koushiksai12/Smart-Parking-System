@@ -151,19 +151,12 @@ Downlad / Clone the repository and save it in your PC
 
 10. Note down the address and save it for later.
 
-### MAC address of Smart Watch
-1. On your mobile phone download and install the application **nRF Connect**
 
-2. Open the application and give required bluetooth permissions
 
-3. It will scan for nearby devices and display all BLE Devices.
+### Slot 1
+1. Go to the repository downloaded in your PC and open ***slot1.ino***
 
-4. Find your smart watch among the devices shown and note down its MAC address and save it for later.
-
-### Office_Ubidots
-1. Go to the repository downloaded in your PC and open ***Office_Ubidots.ino***
-
-2. In the code from line 6 - 10 replace the variables with your values
+2. In the code replace the following variables with your values
     ```
     #define UBI_TOKEN "YOUR_UBIDOTS_TOKEN"
     #define UBI_DEVICE_LABEL "YOUR_UBIDOTS_DEVICE_LABEL"
@@ -181,40 +174,9 @@ Downlad / Clone the repository and save it in your PC
 
     5. Replace ***YOUR_BLE_DEVICE_MAC_ADDRESS*** with the MAC address of you smart watch displayed in nRF Connect application
 
-3. Connect one of the two XIAO_ESP32C3 to the laptop with USB Cable
+3. Connect nodemcu to laptop with USB Cable
 
-4. Go to Tools > Board > esp32 > XIAO_ESP32C3
-
-5. Go to Tools > Port and select the port.
-
-6. Go to Sketch > Upload
-
-7. Observe the output area and wait until code is uploaded succesfully
-
-### Lab_Ubidots
-1. Go to the repository downloaded in your PC and open ***Lab_Ubidots.ino***
-
-2. In the code from line 6 - 10 replace the variables with your values
-    ```
-    #define UBI_TOKEN "YOUR_UBIDOTS_TOKEN"
-    #define UBI_DEVICE_LABEL "YOUR_UBIDOTS_DEVICE_LABEL"
-    #define WIFI_SSID "YOUR_WIFI_SSID"
-    #define WIFI_PSWD "YOUR_WIFI_PASSWORD"
-    #define KNOWN_DEVICE "YOUR_BLE_DEVICE_MAC_ADDRESS"
-    ```
-    1. Replace ***YOUR_UBIDOTS_TOKEN*** with the token of the device created in Ubidots Platform
-
-    2. Replace ***YOUR_UBIDOTS_DEVICE_LABEL*** with the label you have given in Ubidots Platform
-
-    3. Replace ***YOUR_WIFI_SSID*** with the name of your WiFi at Location 2
-
-    4. Replace ***YOUR_WIFI_PASSWORD*** with the password for your WiFi at Location 2
-
-    5. Replace ***YOUR_BLE_DEVICE_MAC_ADDRESS*** with the MAC address of you smart watch displayed in nRF Connect application
-
-3. Connect the other XIAO_ESP32C3 to the laptop with USB Cable
-
-4. Go to Tools > Board > esp32 > XIAO_ESP32C3
+4. Go to Tools > Board > esp8266 > NodeMCU 1.0 (ESP-12E Module)
 
 5. Go to Tools > Port and select the port.
 
@@ -222,10 +184,13 @@ Downlad / Clone the repository and save it in your PC
 
 7. Observe the output area and wait until code is uploaded succesfully
 
-### Display_Ubidots
-1. Go to the repository downloaded in your PC and open ***Display_Ubidots.ino***
+### Slot2
+1. Same as Slot1 but upload the file ***slot2.ino***
 
-2. In the code from line 6 - 9 replace the variables with your values
+### Display_LCD
+1. Go to the repository downloaded in your PC and open ***LCD.ino***
+
+2. In the code replace the variables with your values
     ```
     #define UBI_TOKEN "YOUR_UBIDOTS_TOKEN"
     #define UBI_DEVICE_LABEL "YOUR_UBIDOTS_DEVICE_LABEL"
@@ -254,20 +219,10 @@ Downlad / Clone the repository and save it in your PC
 
 
 ## Usage
-1. Connect the XIAO_ESP32C3 which is uploaded with the code ***Office_Ubidots.ino*** to the power and place it at location 1
+1. Place NodeMCU 1 in parking slot 1, in sideways to the vechicle
 
-2. Connect the XIAO_ESP32C3 which is uploaded with the code ***Lab_Ubidots.ino*** to the power and place it at location 2
+2. Place NodeMCU 2 in parking slot 2, in sideways to the vechicle
 
-3. Connect the NodeMCU v1.0 to the power and place it at location of your desire.
+3. Connect the LCD with NodeMCU v1.0 to the power and place it at location of your desire.
 
-4. When the smart watch is around XIAO_ESP32C3 at location 1 the LCD Display of NodeMCU will show ***R:Office***
-
-5. When the smart watch is around XIAO_ESP32C3 at location 2 the LCD Display of NodeMCU will show ***R:Lab***
-
-6. When the smart watch is not there at any location then the LCD Display of NodeMCU will show ***R:Somewhere***
-
-7. Open a web browser and login to your Ubidots account
-
-8. Go to Data > Dashboards
-
-9. You can adjust the threshold to change the distance of detection between the XIAO_ESP32C3 and your smart watch.
+4. The status of parking slot 1,2 is shown in LCD.
