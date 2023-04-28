@@ -73,7 +73,7 @@ This project is about showing the status of a parking space. Installing a ultras
 ## Hardware Connections
 
 1. Connect the NodeMCU v1.0 with LCD screen
-    ![NodeMCU v1.0 connected to LCD screen](/Images/node_lcd.png "NodeMCU v1.0 connected to LCD Screen")
+    ![NodeMCU v1.0 connected to LCD screen](/Images/noe_lcd.png "NodeMCU v1.0 connected to LCD Screen")
     1. **GND** pin of LCD Screen is connected to **GND** pin of NodeMCU v1.0
 
     2. **VCC** pin of LCD Screen is connected to **3V3** pin of NodeMCU v1.0
